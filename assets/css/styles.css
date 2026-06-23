@@ -1,0 +1,100 @@
+:root {
+  --ck-ink: #111827;
+  --ck-muted: #5b6472;
+  --ck-line: #d9dee7;
+  --ck-soft: #f5f6f8;
+  --ck-paper: #ffffff;
+  --ck-navy: #172033;
+  --ck-accent: #7a1f1f;
+  --ck-section: clamp(4rem, 7vw, 7rem);
+}
+
+* { box-sizing: border-box; }
+body {
+  color: var(--ck-ink);
+  background: var(--ck-paper);
+  font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+  line-height: 1.75;
+}
+
+.skip-link { position: absolute; inset-block-start: .75rem; inset-inline-start: .75rem; z-index: 1100; padding: .5rem .75rem; background: var(--ck-ink); color: #fff; transform: translateY(-150%); }
+.skip-link:focus { transform: translateY(0); }
+.site-header { position: sticky; top: 0; z-index: 1000; background: #fff; }
+.navbar { min-height: 76px; }
+.navbar-brand { letter-spacing: .02em; }
+.nav-link { color: var(--ck-muted); font-size: .95rem; }
+.nav-link:hover, .nav-link:focus { color: var(--ck-ink); }
+
+.section { padding-block: var(--ck-section); }
+.section--muted { background: var(--ck-soft); }
+.section--hero { padding-block: clamp(5rem, 10vw, 10rem) clamp(4rem, 7vw, 7rem); }
+.eyebrow { color: var(--ck-accent); font-size: .78rem; font-weight: 700; letter-spacing: .08em; margin-bottom: 1rem; text-transform: uppercase; }
+.section-heading { max-width: 760px; margin-bottom: clamp(2rem, 4vw, 3.5rem); }
+.section-heading h2, .purpose-panel h2, .final-cta h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.25; letter-spacing: -.03em; margin: 0; }
+.section-heading p:last-child, .purpose-panel p:last-child, .final-cta p { color: var(--ck-muted); margin-top: 1.25rem; max-width: 62ch; }
+.section-heading--split { max-width: none; display: flex; justify-content: space-between; gap: 1.5rem; align-items: end; }
+
+.hero__title { max-width: 920px; line-height: 1.15; letter-spacing: -.04em; }
+.hero__lead { color: var(--ck-muted); max-width: 680px; margin-block: 1.5rem 2rem; }
+.executive-note, .card-consulting, .service-card, .article-preview, .text-panel { background: #fff; border: 1px solid var(--ck-line); padding: clamp(1.25rem, 2vw, 2rem); }
+.executive-note { border-top: 4px solid var(--ck-accent); }
+.executive-note__label, .service-card__kicker { color: var(--ck-muted); font-size: .82rem; font-weight: 700; margin-bottom: .75rem; }
+.executive-note__text { font-size: 1.1rem; margin: 0; }
+
+.insight-strip { background: var(--ck-navy); color: #fff; }
+.insight-strip__inner { min-height: 86px; display: flex; gap: 1.5rem; align-items: center; justify-content: space-between; border-inline: 1px solid rgba(255,255,255,.14); padding: 1.25rem; }
+.insight-strip__inner span { color: rgba(255,255,255,.72); }
+
+.card-consulting, .service-card, .article-preview, .outcome-item, .insight-stack article, .process-list li { height: 100%; transition: border-color .2s ease, transform .2s ease; }
+.card-consulting:hover, .service-card:hover, .article-preview:hover { border-color: #aeb6c3; transform: translateY(-2px); }
+h3, h4 { line-height: 1.35; }
+.card-consulting h3, .service-card h4, .article-preview h3 { font-size: 1.15rem; margin-bottom: .85rem; }
+.card-consulting p, .service-card p, .article-preview p, .outcome-item p, .process-list p, .insight-stack p { color: var(--ck-muted); margin-bottom: 0; }
+.structured-list { margin: 1.5rem 0 0; padding: 0; list-style: none; }
+.structured-list li { border-top: 1px solid var(--ck-line); padding-block: .9rem; }
+
+.outcome-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ck-line); border-bottom: 1px solid var(--ck-line); }
+.outcome-item { padding: clamp(1.5rem, 3vw, 2.5rem); border-inline-start: 1px solid var(--ck-line); }
+.outcome-item:last-child { border-inline-start: 0; }
+.outcome-item span, .process-list span { color: var(--ck-accent); font-weight: 700; font-size: .86rem; }
+
+.service-groups { display: grid; gap: clamp(2rem, 5vw, 4rem); }
+.service-group > h3 { border-bottom: 1px solid var(--ck-line); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+.service-card { border-top: 3px solid var(--ck-navy); }
+
+.process-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--ck-line); }
+.process-list li { padding: 1.5rem; border-inline-start: 1px solid var(--ck-line); }
+.process-list li:last-child { border-inline-start: 0; }
+
+.management-insights { background: var(--ck-navy); color: #fff; }
+.management-insights .eyebrow { color: #d8aaaa; }
+.management-insights .section-heading p:last-child, .management-insights .insight-stack p, .management-insights .insight-stack span { color: rgba(255,255,255,.72); }
+.insight-stack { display: grid; gap: 1rem; }
+.insight-stack article { padding: 1.5rem; border: 1px solid rgba(255,255,255,.16); background: rgba(255,255,255,.04); }
+.insight-stack h3 { font-size: 1.25rem; margin: .5rem 0; }
+
+.article-preview a, .text-link { color: var(--ck-ink); font-weight: 700; text-decoration: none; border-bottom: 1px solid currentColor; }
+.purpose-panel { max-width: 880px; }
+.final-cta { background: linear-gradient(180deg, var(--ck-paper) 0, var(--ck-paper) 50%, var(--ck-soft) 50%); }
+.final-cta__panel { background: var(--ck-navy); color: #fff; padding: clamp(2rem, 6vw, 5rem); }
+.final-cta__panel .eyebrow { color: #d8aaaa; }
+.final-cta__panel p { color: rgba(255,255,255,.76); }
+.site-footer { padding-block: 3rem; background: #0f1724; color: rgba(255,255,255,.72); }
+.site-footer strong, .site-footer h2 { color: #fff; font-size: 1rem; }
+.site-footer ul { list-style: none; padding: 0; margin: 0; }
+.site-footer a { color: rgba(255,255,255,.72); text-decoration: none; }
+.site-footer a:hover { color: #fff; }
+
+@media (max-width: 991.98px) {
+  .section-heading--split, .insight-strip__inner { flex-direction: column; align-items: flex-start; }
+  .outcome-grid, .process-list { grid-template-columns: 1fr; }
+  .outcome-item, .process-list li, .outcome-item:last-child, .process-list li:last-child { border-inline-start: 0; border-top: 1px solid var(--ck-line); }
+  .outcome-item:first-child, .process-list li:first-child { border-top: 0; }
+}
+
+@media (max-width: 575.98px) {
+  .navbar { min-height: 64px; }
+  .section { padding-block: 3.5rem; }
+  .section--hero { padding-block: 4rem 3.5rem; }
+  .btn-lg { font-size: 1rem; }
+}
