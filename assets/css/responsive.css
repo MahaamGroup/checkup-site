@@ -1,0 +1,20 @@
+/* Responsive overrides */
+@media (max-width: 991.98px) {
+  .navbar-collapse { padding-top: 1rem; }
+  .section, .section-lg { padding: 4rem 0; }
+  .timeline, .improve-grid { grid-template-columns: repeat(2, 1fr); }
+  .cta-panel { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 767.98px) {
+  .hero h1 { font-size: 2.25rem; }
+  .hero .lead { font-size: 1rem; }
+  .timeline, .improve-grid { grid-template-columns: 1fr; }
+  .section-heading.d-flex { display: block !important; }
+  .cta-panel { padding: 2rem; }
+  .footer-bottom { flex-direction: column; }
+}
+@media (max-width: 575.98px) {
+  .btn { width: 100%; }
+  .hero-actions { width: 100%; }
+  .brand { font-size: 1.1rem; }
+}
